@@ -1,28 +1,16 @@
-#!/bin/bash
-   # This script calculates simple interest given principal,
-   # annual rate of interest and time period in years.
+<html>
+    <head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Simple Interest Calculator</h1>
 
-   # Do not use this in production. Sample purpose only.
+        Amount <input type="number"  id="principal">  <br/>
+        Rate <input type="number"  id="rate">  <br/>
+        No. of Years <input type="number"  id="years">  <br/>
+        Interest : <span id="result"></span><br>
 
-   # Author: Upkar Lidder (IBM)
-   # Additional Authors:
-   # <your GitHub username>
-
-   # Input:
-   # p, principal amount
-   # t, time period in years
-   # r, annual rate of interest
-
-   # Output:
-   # simple interest = p*t*r
-
-   echo "Enter the principal:"
-   read p
-   echo "Enter rate of interest per year:"
-   read r
-   echo "Enter time period in years:"
-   read t
-
-   s=`expr $p \* $t \* $r / 100`
-   echo "The simple interest is: "
-   echo $s
+        <button onclick="compute()">Compute</button>
+    </body>
+</html>
